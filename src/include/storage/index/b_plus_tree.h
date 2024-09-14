@@ -78,8 +78,8 @@ class BPlusTree {
   auto Insert(const KeyType &key, const ValueType &value, Transaction *txn = nullptr) -> bool;
 
   // Return the sibling's page_id of page_id.
-  auto GetSiblingPageId(const BPlusTree::InternalPage *parent_page, const KeyType &key,
-                        Context &ctx) -> std::pair<page_id_t, KeyType>;
+  auto GetSiblingPageId(const BPlusTree::InternalPage *parent_page, const KeyType &key, Context &ctx)
+      -> std::pair<page_id_t, KeyType>;
 
   void ReplaceKeyAt(BPlusTree::InternalPage *page, const KeyType &src, const KeyType &dst, Context &ctx);
 

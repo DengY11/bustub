@@ -46,4 +46,3 @@ class IndexIterator {
 };
 
 }  // namespace bustub
-

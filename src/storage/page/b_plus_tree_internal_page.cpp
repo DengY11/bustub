@@ -40,8 +40,8 @@ auto B_PLUS_TREE_INTERNAL_PAGE_TYPE::KeyAt(int index) const -> KeyType {
 }
 
 INDEX_TEMPLATE_ARGUMENTS
-auto B_PLUS_TREE_INTERNAL_PAGE_TYPE::Insert(const KeyType &key, const page_id_t &value,
-                                            const KeyComparator &comparator) -> int {
+auto B_PLUS_TREE_INTERNAL_PAGE_TYPE::Insert(const KeyType &key, const page_id_t &value, const KeyComparator &comparator)
+    -> int {
   int index = Lookup(key, comparator);
   MappingType tmp = array_[index];
   int n = GetSize();
